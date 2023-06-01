@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>Sudoku</title>
+</head>
+<body>
+       <h2>Sudoku</h2>
+    <div id="game">
+        <div class="top">
+        <button id="Easy">Easy</button>
+        <button id="Medium">Medium</button>
+        <button id="Hard">Hard</button>
+        </div>
+    <div class="board">
+<div class="cell" id="cell-1"><input class="1 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        this.value && Math.abs(this.value) >= 1 ?   Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="1" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-2"><input class="1 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="2" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-3"><input class="1 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="3" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-4"><input class="2 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="4" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-5"><input class="2 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="5" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-6"><input class="2 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="6" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-7"><input class="3 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="7" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-8"><input class="3 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="8" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-9"><input class="3 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="9" onclick="myfunction(id),3" /></div>
+<div class="cell" id="cell-10"><input class="1 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="10" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-11"><input class="1 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="11" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-12"><input class="1 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="12" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-13"><input class="2 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="13" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-14"><input class="2 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="14" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-15"><input class="2 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="15" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-16"><input class="3 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="16" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-17"><input class="3 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="17" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-18"><input class="3 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="18" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-19"><input class="1 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="19" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-20"><input class="1 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="20" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-21"><input class="1 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="21" onclick="myfunction(id,1)" /></div>
+<div class="cell" id="cell-22"><input class="2 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="22" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-23"><input class="2 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="23" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-24"><input class="2 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="24" onclick="myfunction(id,2)" /></div>
+<div class="cell" id="cell-25"><input class="3 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="25" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-26"><input class="3 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="26" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-27"><input class="3 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="27" onclick="myfunction(id,3)" /></div>
+<div class="cell" id="cell-28"><input class="4 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="28" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-29"><input class="4 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="29" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-30"><input class="4 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="30" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-31"><input class="5 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="31" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-32"><input class="5 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="32" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-33"><input class="5 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="33" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-34"><input class="6 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="34" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-35"><input class="6 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="35" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-36"><input class="6 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="36" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-37"><input class="4 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="37" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-38"><input class="4 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="38" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-39"><input class="4 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="39" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-40"><input class="5 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="40" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-41"><input class="5 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="41" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-42"><input class="5 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="42" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-43"><input class="6 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="43" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-44"><input class="6 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="44" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-45"><input class="6 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="45" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-46"><input class="4 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="46" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-47"><input class="4 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="47" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-48"><input class="4 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="48" onclick="myfunction(id,4)" /></div>
+<div class="cell" id="cell-49"><input class="5 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="49" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-50"><input class="5 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="50" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-51"><input class="5 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="51" onclick="myfunction(id,5)" /></div>
+<div class="cell" id="cell-52"><input class="6 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="52" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-53"><input class="6 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="53" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-54"><input class="6 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="54" onclick="myfunction(id,6)" /></div>
+<div class="cell" id="cell-55"><input class="7 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="55" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-56"><input class="7 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="56" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-57"><input class="7 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="57" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-58"><input class="8 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="58" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-59"><input class="8 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="59" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-60"><input class="8 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="60" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-61"><input class="9 class-0" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="61" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-62"><input class="9 class-1" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="62" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-63"><input class="9 class-2" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="63" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-64"><input class="7 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="64" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-65"><input class="7 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="65" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-66"><input class="7 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="66" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-67"><input class="8 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="67" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-68"><input class="8 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="68" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-69"><input class="8 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="69" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-70"><input class="9 class-3" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="70" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-71"><input class="9 class-4" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="71" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-72"><input class="9 class-5" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="72" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-73"><input class="7 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="73" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-74"><input class="7 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="74" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-75"><input class="7 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="75" onclick="myfunction(id,7)" /></div>
+<div class="cell" id="cell-76"><input class="8 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="76" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-77"><input class="8 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="77" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-78"><input class="8 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="78" onclick="myfunction(id,8)" /></div>
+<div class="cell" id="cell-79"><input class="9 class-6" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="79" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-80"><input class="9 class-7" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="80" onclick="myfunction(id,9)" /></div>
+<div class="cell" id="cell-81"><input class="9 class-8" type="number" maxlength="1" pattern="\d*" min="1" max="9" oninput="this.value = 
+        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null ;myLocal(this.id);javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+     id="81" onclick="myfunction(id,9)" /></div>
+    </div>
+                 <div class="end"><button id="Validate">Validate</button></div>
+                 <div><button onclick="newGame()"id="new">Reset</button></div>
+                 </div> 
+<script src="script.js"></script>
+</body>
+</html>

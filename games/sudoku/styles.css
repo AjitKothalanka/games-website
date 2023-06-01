@@ -1,0 +1,134 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	background: #F2DCA2;
+}
+h2{ 
+    margin-top: 0px;
+    text-align: center;
+    color: rgb(255, 153, 0);
+}
+.cell{
+    border:1px solid #bec6d4;
+}
+.prefilled{
+    background-color: #FDF0FF;
+}
+.cell:nth-child(3n)
+{
+    border-right:1px solid #344861;
+} 
+.cell:nth-child(n+19):nth-child(-n+27)
+{
+    border-bottom:1.5px solid #344861;
+} 
+.cell:nth-child(n+46):nth-child(-n+54)
+{
+    border-bottom:1.5px solid #344861;
+} 
+.cell input:focus{
+    background-color: #BBDEFB;
+}
+.focuss{
+    background-color: #BBDEFB !important;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(9,50px);
+    grid-template-rows: repeat(9,50px);
+    border:2px solid #344861;
+}
+.cell input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 34px;
+    caret-color: transparent;
+    font-weight: lighter;
+    cursor: default;
+    color: darkred;
+}
+.animate{
+    background-color:#E2EBF3;
+}
+#game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.end{
+    display: flex;
+    justify-content: center;
+ width: 100vw;
+ padding: 20px;
+}
+.top{
+display: flex;
+justify-content: space-evenly;
+ width: 100vw;
+ padding: 20px;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3d8b40;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.errorrow{
+    background-color:lightpink;
+}
+.errorcolumn{
+    background-color:lightpink;
+}
+.errorblock{
+    background-color:lightpink;
+}
+@media only screen and (max-width: 480px) {
+
+    .board{
+        display: grid;
+        grid-template-columns: repeat(9,45px);
+        grid-template-rows: repeat(9,45px);
+        border:1px solid #344861;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+
+    .board{
+        display: grid;
+        grid-template-columns: repeat(9,35px);
+        grid-template-rows: repeat(9,35px);
+        border:1px solid #344861;
+    }
+  }

@@ -1,0 +1,62 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	background: #F2DCA2;
+}
+h1 {
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.cell:hover {
+  background-color: #f1f1f1;
+}
+
+.dialog-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.dialog-box p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.dialog-box button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 4
